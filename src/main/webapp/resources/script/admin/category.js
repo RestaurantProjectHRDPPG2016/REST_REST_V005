@@ -821,6 +821,12 @@ app
             });
         }
     }
+    
+    $scope.addtoFaorite = function(){
+    		alert("add to favorite");
+    }
+    
+    
 });
 
 /* ENd Restuarant Controller */

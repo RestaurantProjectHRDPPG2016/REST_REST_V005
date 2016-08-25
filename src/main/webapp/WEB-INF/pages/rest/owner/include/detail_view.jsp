@@ -53,12 +53,13 @@
 							<br>
 							<div class="col-md-12">
 								<center>
-									<span class="btn btn-sm btn-primary">Like</span> <a
-										href="/locations/{{r.id}}"><span
-										class="btn btn-default btn-sm">Visit Map</span></a> <a
-										href="/addtofavorite/{{r.id}}"><span
-										class="btn btn-default btn-sm">Add to favorite &nbsp<span
-											class="glyphicon glyphicon-bookmark"></span></span></a>
+									<span class="btn btn-sm btn-primary">Like</span> 
+										<a href="/locations/{{r.id}}">
+											<span class="btn btn-default btn-sm">Visit Map</span>
+										</a> 
+									<span class="btn btn-default btn-sm" ng-click="addtoFaorite()">Add to favorite &nbsp
+										<span class="glyphicon glyphicon-bookmark"></span>
+									</span>
 								</center>
 							</div>
 						</div>
