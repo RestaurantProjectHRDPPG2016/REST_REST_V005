@@ -46,6 +46,12 @@
 				</div>
 			</div>
 		</div>
+		<!-- ************************ -->
+				<!-- No Result -->
+				<div class="col-md-12" id="notfound" style="display:none;">
+				<img class="img-responsive" src="${pageContext.request.contextPath}/resources/upload/playlist/img/no-result.png"/>
+				</div>
+				
 		</div>
 	</div>
 	</div>

@@ -6,6 +6,7 @@ var checkIsDefined = function(val){
 }
 
 $(document).ready(function() {
+
 	$("#searchbtn").click(function() {
 		$("#mysearchbtn").toggle();
 	});
@@ -423,13 +424,12 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 						})
 								.then(
 										function(response) {
-											console.log(response);
 											$scope.rest = response.data.DATA;
 											RESTAURANT
 													.loadPagination(response.data);
-											// if($scope.rest.length <=0){
-											// $window.location.href=("/404");
-											// }
+											if ($scope.rest.length <= 0) {
+												$("#notfound").show();
+											}
 
 										},
 										function(response) {
@@ -465,6 +465,10 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 								+ $scope.filter.district + "&commune="
 								+ $scope.filter.commune;
 
+					}
+					
+					$scope.searchRestAdmin = function(){
+						alert("Search");
 					}
 
 					// TODO: Reload data again
@@ -890,7 +894,7 @@ app.controller('MyCatCtrl', function($scope, $http, $window, $rootScope) {
 			$scope.MyCategories = response.data.DATA;
 			RESTAURANT.loadPagination(response.data);
 			if ($scope.MyCategories.length <= 0) {
-				$window.location.href = ("/404");
+				$("#notfound").show();
 			}
 
 		}, function(response) {
@@ -914,12 +918,10 @@ app.controller('MyTypeCtrl', function($scope, $http, $window, $rootScope) {
 			params : $scope.filter,
 			method : 'GET'
 		}).then(function(response) {
-			console.log(response);
 			$scope.MyRestType = response.data.DATA;
 			RESTAURANT.loadPagination(response.data);
-
 			if ($scope.MyRestType.length <= 0) {
-				$scope.getNotFound();
+				$("#notfound").show();
 			}
 
 		}, function(response) {
@@ -934,26 +936,7 @@ app.controller('MyTypeCtrl', function($scope, $http, $window, $rootScope) {
 	RESTAURANT.getRestaurantByType(type_id);
 
 });
-//
-// GET rest By ID
 
-//app.directive('myFilter', [function() {
-//    return {
-//        restrict: 'A',       
-//        link: function(scope, element) {
-//            // wait for the last item in the ng-repeat then call init
-//            angular.element(document).ready(function() {
-//                initJqueryFiler(['#img','#menus'], [[],[]]);
-//            });
-//            // OR use $braodcast & $on in Controller
-//        }
-//    };
-//    /**** Usable array ****/
-//    // If your input file, id = '#gallery' use:
-//    // => newFiles['gallery']
-//    // => deletedImageIDs['gallery']
-//
-//}]);
 
 //				add and update
 				app.directive('myFilter', [function() {

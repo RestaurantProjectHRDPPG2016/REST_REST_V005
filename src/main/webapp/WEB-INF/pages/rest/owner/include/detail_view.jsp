@@ -54,7 +54,7 @@
 							<div class="col-md-12">
 								<center>
 									<span class="btn btn-sm btn-primary">Like</span> 
-										<a href="/locations/{{r.id}}">
+										<a href="/locations/{{r.id}}" id="map">
 											<span class="btn btn-default btn-sm">Visit Map</span>
 										</a> 
 									<span class="btn btn-default btn-sm" ng-click="addtoFaorite()">Add to favorite &nbsp

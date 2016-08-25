@@ -54,7 +54,6 @@
 				<h2>ព័ណ៍មានរបស់ភោជនីយដ្ឋាន</h2>
 			</div>
 			<div class="panel-body">
-<!-- 
                  <div class="input-group">
                     <input type="text" class="form-control" ng-model="nameforsearchrest" >
                 
@@ -65,7 +64,7 @@
                         </button>
                     </div>
                  
-                </div>   -->
+                </div>   
 				<div class="table-responsive">
 
 					<button class="btn btn-success" data-toggle="modal"
