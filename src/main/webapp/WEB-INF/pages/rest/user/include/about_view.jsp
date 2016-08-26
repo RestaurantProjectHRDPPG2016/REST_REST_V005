@@ -47,7 +47,7 @@
 					    		<p><span  class="glyphicon glyphicon-ok"></span>	យើង​ផ្តល់​ជូន​អតិ​ថិ​ជន​របស់​យើង​ផ្តល់​សេវា​បាន​លឿន​ជាង​មុន.</p>
 					</div>
 				</div>
-				<h3 id="myidiom"> សមាជិករចនា</h3>
+				<h3 id="myidiom"> សមាជិករចនាគេហទំព័រ</h3>
 				<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="media">
 							  <div class="media-left">
