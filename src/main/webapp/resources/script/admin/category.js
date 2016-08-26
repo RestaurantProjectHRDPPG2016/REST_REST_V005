@@ -1,4 +1,4 @@
-//HElooooads
+
 var checkIsDefined = function(val){
 	if (typeof name !== "undefined" && val != undefined)
 		return val;
@@ -113,7 +113,6 @@ app.controller('adminCtrl', function($scope, $http, $window, $rootScope) {
 			url : 'http://localhost:8888/maincategory',
 			method : 'GET'
 		}).then(function(response) {
-			console.log("COMBO BOX==>",response);
 			$scope.myCatNP = response.data.DATA;
 		}, function(response) {
 			alert("fail");
@@ -178,7 +177,6 @@ app.controller('adminCtrl', function($scope, $http, $window, $rootScope) {
 	$scope.editCategory = function(newData) {
 		$("#addCat").hide();
 		$("#updateCat").show();
-		console.log(newData);
 		$scope.id = newData.c.id;
 		$scope.img1 = newData.c.img1;
 		$scope.img2 = newData.c.img2;
@@ -203,7 +201,7 @@ app.controller('adminCtrl', function($scope, $http, $window, $rootScope) {
 		});
 	}
 
-	/* Start Restaurant Type */
+	/* ****************** Start Restaurant Type****************** */
 
 	// GetALL Type of restaurant
 	$scope.getRestType = function() {
@@ -291,11 +289,6 @@ app.controller('adminCtrl', function($scope, $http, $window, $rootScope) {
 
 	// GetDistrict
 	$scope.getDistrict = function(province) {
-//
-//		$scope.filter.province = province.id;
-
-		console.log($scope.filter);
-		// $scope.city = $scope.province;
 		$http({
 			url : 'http://localhost:8888/cities/' + province.id + '/districts',
 			method : 'GET'
@@ -309,9 +302,6 @@ app.controller('adminCtrl', function($scope, $http, $window, $rootScope) {
 
 	// Getcommune
 	$scope.getCommune = function(district) {
-//		console.log(district);
-//		$scope.filter.district = district.id;
-
 		$http(
 				{
 					url : 'http://localhost:8888/districts/' + district.id
@@ -324,7 +314,6 @@ app.controller('adminCtrl', function($scope, $http, $window, $rootScope) {
 		});
 	}
 	$scope.communeChange = function(communeforsearch) {
-		console.log(communeforsearch);
 		$scope.filter.commune = communeforsearch.id;
 
 	}
@@ -333,29 +322,9 @@ app.controller('adminCtrl', function($scope, $http, $window, $rootScope) {
 /* Start Resturant Controller */
 
 app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
-					// Pagination
-
 					// TODO: declare user object
 					var RESTAURANT = {};
-					// $scope.nameforsearch= nameforsearch;
-					// $scope.categoryforsearch = categoryforsearch;
-					// $scope.provinceforsearch = provinceforsearch;
-					// $scope.districtforsearch = districtforsearch;
-					// $scope.communeforsearch = communeforsearch;
-					// TODO: default filter
-
-					// $scope.filter = {
-					// page : 1,
-					// limit : 12,
-					// name : (name) ? name : $scope.nameforsearch,
-					// c_id : (category) ? category: $scope.categoryforsearch,
-					// province : (province) ? province :
-					// $scope.provinceforsearch,
-					// district : (district) ? district :
-					// $scope.districtforsearch,
-					// commune : (commune) ? commune : $scope.communeforsearch
-					// };
-
+			
 					$scope.filter = {
 						page : 1,
 						limit : 12,
@@ -371,7 +340,6 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 					};
 
 					$scope.categoryChange = function(c) {
-						console.log(c);
 					};
 
 					// TODO:
@@ -415,7 +383,6 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 					// GetALL
 					RESTAURANT.getRest = function() {
 						$scope.filter.name="";
-						console.log( $scope.filter);
 						$http({
 							url : 'http://localhost:8888/restaurant',
 							params : $scope.filter,
@@ -433,7 +400,6 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 
 										},
 										function(response) {
-											console.log(response);
 											alert('failed To call all data From GEt all Restaurant By search');
 										});
 					}
@@ -450,13 +416,6 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 								: $scope.districtforsearch.id;
 						$scope.filter.commune = ($scope.communeforsearch == undefined) ? ''
 								: $scope.communeforsearch.id;
-
-						console.log('Param');
-						console.log($scope.filter.name);
-						console.log($scope.filter.c_id);
-						console.log($scope.filter.province);
-						console.log($scope.filter.district);
-						console.log($scope.filter.commune);
 
 						$window.location.href = "/search_result?name="
 								+ $scope.filter.name + "&category="
@@ -499,20 +458,6 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 						for (var i = 0; i < newFiles['menus'].length; i++) {
 							frmData.append("menus", newFiles['menus'][i]);
 						}
-//						
-//						console.log('Name', checkIsDefined($scope.name);
-//						console.log('type', checkIsDefined($rootScope.subCategoryId);
-//						console.log('description', checkIsDefined($scope.desc);
-//						console.log('home', checkIsDefined($scope.home);
-//						console.log('street', checkIsDefined($scope.street);
-//						console.log('province', ($scope.province == undefined) ? '' : $scope.province.id);
-//						console.log('commune', ($scope.district == undefined) ? '' : $scope.district.id);
-//						console.log('district', ($scope.commune == undefined) ? '' : $scope.commune.id);
-//						console.log('latitude', checkIsDefined($scope.latitude);
-//						console.log('longitude', checkIsDefined($scope.longitude);
-//						
-						
-
 						frmData.append('name',checkIsDefined($scope.name));
 						frmData.append('type', checkIsDefined($rootScope.subCategoryId));
 						frmData.append('description', checkIsDefined($scope.desc));
@@ -537,11 +482,9 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 						})
 								.then(
 										function(response) {
-											console.log(response.data);
 											RESTAURANT.getRest();
 										},
 										function(error) {
-											console.log(error.data);
 											alert('failed to upload data! Please Try again Youra !!!!!');
 											RESTAURANT.getRest();
 										});
@@ -552,7 +495,6 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 						if (b == true) {
 							RESTAURANT.addRestaurant();
 						} else {
-							console.log("UPDATEME");
 							RESTAURANT.updateRestaurant();
 						}
 					}
@@ -572,7 +514,6 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 						b = false;
 						$scope.btnButton = 'UPDATE';
 						$scope.title='Update Restaurant Information';
-						console.log(rest);
 						id = rest.r.id;
 						$scope.name = rest.r.name;
 						$scope.category = rest.r.sub_id + '';
@@ -644,23 +585,19 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 					$scope.myfun=function(){
 						for(var i in images){
 							$scope.sample1 = images[i].url
-							console.log("sample1 is are "+$scope.sample1);
 							}
 					}
 					$scope.mymenus=function(){
 						for(var i in menus){
 							$scope.sample2 =menus[i].url
-							console.log("my sample 2 is "+$scope.sample2);
 						}
 					}			  
 
 					RESTAURANT.updateRestaurant = function() {
-						console.log("IDIIII" +id);
 						var frmData = new FormData();
 						var tel = $('input[name=tel]');
 
 						$.each(tel, function(key, e) {
-							console.log(e);
 							frmData.append('telephones', $(e).val());
 						});
 						//var restaurant_files = angular.element('#img')[0].files;
@@ -710,11 +647,9 @@ app.controller('restCtrl',function($scope, $http, $window, $rootScope) {
 						})
 								.then(
 										function(response) {
-											console.log(response.data);
 											RESTAURANT.getRest();
 										},
 										function(error) {
-											console.log(error.data);
 											alert('failed to upload data! Please Try again Youra !!!!!');
 										});
 					}
@@ -743,12 +678,10 @@ app
 							url : 'http://localhost:8888/restaurant/' + id,
 							method : 'GET',
 						}).then(function(response) {
-							console.log(response);
 							$scope.restByID = response.data.DATA;
 							init_map($scope.restByID[0].latitude, $scope.restByID[0].longitude,$scope.restByID[0].name,$scope.restByID[0].province,$scope.restByID[0].street);
 
 						}, function(response) {
-							console.log(response);
 							alert('failed To call all data');
 						});
 					}
@@ -761,7 +694,6 @@ app
 				    }];
 
 				    $scope.getSelectedRating = function (rating) {
-				        console.log(rating);
 				    }
 				    
 				    $scope.setMinrate= function(){
@@ -890,7 +822,6 @@ app.controller('MyCatCtrl', function($scope, $http, $window, $rootScope) {
 			params : $scope.filter,
 			method : 'GET'
 		}).then(function(response) {
-			console.log(response);
 			$scope.MyCategories = response.data.DATA;
 			RESTAURANT.loadPagination(response.data);
 			if ($scope.MyCategories.length <= 0) {
@@ -898,7 +829,6 @@ app.controller('MyCatCtrl', function($scope, $http, $window, $rootScope) {
 			}
 
 		}, function(response) {
-			console.log(response);
 		});
 	}
 
@@ -925,7 +855,6 @@ app.controller('MyTypeCtrl', function($scope, $http, $window, $rootScope) {
 			}
 
 		}, function(response) {
-			console.log(response);
 		});
 	}
 	// TODO: Reload data again
@@ -966,9 +895,7 @@ app.controller('addToFavoriteCtrl',function($scope, $http, $window, $rootScope) 
 			if ($scope.addToFavorite.length <= 0) {
 				$("#notfound").show();
 			}
-
 		}, function(response) {
-			console.log(response);
 		});
 	}
 	// TODO: Reload data again
