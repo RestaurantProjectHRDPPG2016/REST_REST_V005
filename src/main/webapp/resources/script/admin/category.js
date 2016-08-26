@@ -786,6 +786,12 @@ app
 				    +"\n"+"Second rate: "+ $scope.ratings[1].current+"/"+$scope.ratings[0].max)
 				  }
 					
+				  $scope.addtoFaorite = function(){
+			    		alert("add to favorite");
+			    }
+			    
+				  
+				  
 				})
 .directive('starRating', function () {
     return {
@@ -825,12 +831,6 @@ app
             });
         }
     }
-    
-    $scope.addtoFaorite = function(){
-    		alert("add to favorite");
-    }
-    
-    
 });
 
 /* ENd Restuarant Controller */
