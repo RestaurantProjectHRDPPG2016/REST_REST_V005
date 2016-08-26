@@ -5,13 +5,16 @@
 		margin:30px 0px;
 	}
 </style>
-<div class="container" style="padding: 0px;">
+<div class="container">
 <div class="row margintop-50">
       <div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
            <div class="panel">
-                <div class="panel-heading"​ style="background-color: rgb(214,236,246);">
+           <div class="row panel-group">
+				<div class="panel panel-info">
+					<div class="panel-heading">រក្សារទំនាក់ទំនង</div>
+                <!-- <div class="panel-heading"​ style="background-color: rgb(214,236,246);">
                   <center><p class="panel-title" style="font-size: 22px;"​​>រក្សារទំនាក់ទំនង</p></center>
-                </div>
+                </div> -->
                 <center>
                 <div class="panel panel-body">
                 <div class="row">
@@ -42,21 +45,11 @@
                   <p><sapn class="glyphicon glyphicon-envelope"></span>PHIRUM.GM@GMAIL.COM</p>
                 </div>
 				</div>
-                </div>
-                
-                
-                <hr>
-                 </center>
-                </div>
-               
-                </div>
-             </div>
-                  <!--1 ent contactus-->
-                  <!--2 map-->
-                  <div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="row">
+				<div class="col-md-12 col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
                   
                   	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-                  	<div style="overflow:hidden;height:500px;width:1170px;"><div id="gmap_canvas" style="height:500px;width:1170px;">
+                  	<div style="overflow:hidden;height:500px;width:100%;"><div id="gmap_canvas" style="height:500px;width:100%;">
                   	<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
                   	<a class="google-map-code" href="http://csgofranklin.com" id="get-map-data">csgopolygon code</a></div>
                   	</div><script type="text/javascript"> 
@@ -68,7 +61,16 @@
                   	google.maps.event.addDomListener(window, 'load', init_map);</script>
                    
                   </div>
-                  <!-- end map-->
+                </div>
+                 </center>
+                 
+                </div>
+               
+                </div>
+             </div>
+                 
               
+    </div>
+    </div>
     </div>
     <hr>

@@ -17,7 +17,7 @@
     <div class="footer" id="footer">
         <div class="container">
             <div class="row myfooter">
-                <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12">
                     <h3> Fresh Menu</h3>
 			    		<p><span  class="glyphicon glyphicon-ok"></span>	Fresh Menu ត្រូវ​បាន​បង្កើត​ឡើង​តាំង​ពី​ខែ​មិថុនា​ 01, ឆ្នាំ 2016 .</p>
 			    		<p><span  class="glyphicon glyphicon-ok"></span>	យើង​ផ្តល់​អោយ​រាល់​គ្រប់​ភោជនីយដ្ឋាន​អាហារ​ទាំង​អស់​អាច​ផ្សប់​ផ្សាយ​ពាណិជ្ចកម្ម​ដោយ​ឥត​គិត​ថ្លៃ​</p>
@@ -25,7 +25,7 @@
 			    		<p><span  class="glyphicon glyphicon-ok"></span>	យើង​ផ្តល់​ជូន​ដល់​អតិថិជន​នូវ​វិធីដែល​ត្រឹម​ត្រូវ​ក្នុង​ការ​ចែក​រំលែក​ផលិត​ផល​ជា​ផ្លូវ​ការ​របស់​ពួក​គេ​ទៅ​កាន់​អ្នក​រាល់​គ្នា.</p>
 			    		<p><span  class="glyphicon glyphicon-ok"></span>	យើង​ផ្តល់​ជូន​អតិ​ថិ​ជន​របស់​យើង​ផ្តល់​សេវា​បាន​លឿន​ជាង​មុន.</p>
                 </div>
-                <div class="col-lg-4  col-md-6 col-sm-6 col-xs-12 ">
+                <div class="col-lg-3  col-md-6 col-sm-6 col-xs-6 ">
                     <h3> ប​ណ្តា​ញ​សង្គម </h3>
                
                    <ul class="social" >
@@ -37,7 +37,7 @@
                     </ul>
                     
                 </div>
-               <div class="col-lg-4  col-md-6 col-sm-6 col-xs-12">
+               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                     <h3> ទាញយកកម្មវិធីទូរស័ព្ទដៃ</h3>
                     <ul>
                         <li> <a href="#"><img src="${pageContext.request.contextPath}/resources/upload/playlist/img/appstore.png"/></a> </li>
@@ -54,7 +54,7 @@
     <div class="footer-bottom">
         <div class="container">
         <center>
-            <p class="pull-center"> រក្សារសិទ្ធគ្រប់យ៉ាង © និស្សិតនៅ មជ្ឈមណ្ឌល កូរ៉េ សហ្វហ្វែរ អេច អរ ឌី .  </p>
+            <p class="pull-center"> រក្សាសិទ្ធគ្រប់យ៉ាង © និស្សិតនៅ មជ្ឈមណ្ឌល កូរ៉េ សហ្វហ្វែរ អេច អរ ឌី .  </p>
         </center>
         </div>
     </div>

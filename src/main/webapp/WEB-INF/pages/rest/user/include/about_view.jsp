@@ -6,14 +6,21 @@
 			font-family: cursive;
 			text-decoration: none;
 		}
+		#myidiom{
+			font-weight: bolder;
+			color: rgb(59,89,153);
+		}
+		#profile img{
+		border: rgb(85,174,221) 3px solid;
+	}
 	</style>
-<div class="container" style="padding: 0px;">
+<div class="container">
 
 
-<div class="panel ">
-					  <div class="panel-heading"  style="background-color: rgb(205,231,245);">
-					    <center><h3 class="panel-title">អំពីយើង</h3></center>
-					  </div>
+
+<div class="row panel-group">
+	<div class="panel panel-info">
+		<div class="panel-heading">អំពីយើង</div>
 			<div class="panel panel-body">
                 <div class="row">
                 	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
@@ -21,8 +28,8 @@
 									<img src="${pageContext.request.contextPath}/resources/upload/user/img/mymission.png" ></button>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
-									<h3 id="mycontact">បេសកកម្មរបស់ខ្ញុំ</h3>
-						<p style="line-height: 20px;">“យើង​ផ្តល់​ជូន​នូវ​ប្រភេទ​សេវាកម្ម​ផ្សប់​ផ្សាយ​ប្រកាស​ភោជនីយដ្ឋាន​, ម្ហូប​អាហារ​ជា​មួយ​នឹង​​បច្ចេក​​វិទ្យា​​សម័យ​​ទំនើប​​និង​​ចំណេះ​​ដឹង​​ដែល​​បំពេញ​​តាម​​សេចក្ដី​​ត្រូវ​​ការ​​របស់​​អ្នក​​រាល់​​គ្នា​​និង​​មាន​​តម្លៃ​​សមរម្យ​។​
+									<h3 id="myidiom">បេសកកម្មរបស់ខ្ញុំ</h3>
+						<p style="line-height: 28px;">“យើង​ផ្តល់​ជូន​នូវ​ប្រភេទ​សេវាកម្ម​ផ្សប់​ផ្សាយ​ប្រកាស​ភោជនីយដ្ឋាន​, ម្ហូប​អាហារ​ជា​មួយ​នឹង​​បច្ចេក​​វិទ្យា​​សម័យ​​ទំនើប​​និង​​ចំណេះ​​ដឹង​​ដែល​​បំពេញ​​តាម​​សេចក្ដី​​ត្រូវ​​ការ​​របស់​​អ្នក​​រាល់​​គ្នា​​និង​​មាន​​តម្លៃ​​សមរម្យ​។​
 					    	ចំ​ណេះ​ដឹង​និង​ជំនាញ​វិជ្ជាជីវៈ​របស់​យើង​នឹង​ជួយ​ជម្រុញ​ឱ្យ​និង​ដោះ​ស្រាយ​បញ្ហា​សម្រាប់​អតិថិ​ជន​របស់​យើង​។”</p>
 					</div>
 				</div>
@@ -32,7 +39,7 @@
 									<img style="margin-left:0px;" src="${pageContext.request.contextPath}/resources/upload/user/img/1.png" ></button>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
-									<h3 id="mycontact">ចក្ខុវិស័យ</h3>
+									<h3 id="myidiom">ចក្ខុវិស័យ</h3>
 						<p>“ចែក​រំលែក​កម្មវិធី​ព័តមាន​ដែល​ទាក់​ទង​នឹង​មុខ​ម្ហូប​ និង​រាល់​ ភោជ្ជនី​ដ្ឋាន​នៅ​លើ​បណ្ដាញ ​online ជា​រៀង​រាល់​ថ្ងៃ”</p>
 					    		<p><span  class="glyphicon glyphicon-ok"></span>	យើង​ផ្តល់​អោយ​រាល់​គ្រប់​ភោជនីយដ្ឋាន​អាហារ​ទាំង​អស់​អាច​ផ្សប់​ផ្សាយ​ពាណិជ្ចកម្ម​ដោយ​ឥត​គិត​ថ្លៃ​</p>
 					    		<p><span  class="glyphicon glyphicon-ok"></span>	យើង​ផ្តល់​ជូន​អតិថិ​ជន​របស់​យើង​ជា​ជម្រើស​ល្អ​បំផុត​ជា​មួយ​នឹង​បច្ចេកវិទ្យា​ទំនើប​ចុង​ក្រោយ</p>
@@ -40,11 +47,12 @@
 					    		<p><span  class="glyphicon glyphicon-ok"></span>	យើង​ផ្តល់​ជូន​អតិ​ថិ​ជន​របស់​យើង​ផ្តល់​សេវា​បាន​លឿន​ជាង​មុន.</p>
 					</div>
 				</div>
+				<h3 id="myidiom"> សមាជិករចនា</h3>
 				<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="media">
 							  <div class="media-left">
-							    <a href="#">
-							      <img class="media-object"src="${pageContext.request.contextPath}/resources/upload/user/img/youra2.png" >
+							    <a href="#"  id="profile">
+							      <img class="media-object" src="${pageContext.request.contextPath}/resources/upload/user/img/youra2.png" >
 							    </a>
 							  </div>
 							  <div class="media-body thumbnail">
@@ -62,7 +70,7 @@
 
 							  </div>
 							   <div class="media-right">
-							    <a href="#">
+							    <a href="#" id="profile">
 							      <img class="media-object"src="${pageContext.request.contextPath}/resources/upload/user/img/rany2.png" >
 							    </a>
 							  </div>
@@ -71,7 +79,7 @@
 						<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="media">
 							  <div class="media-left">
-							    <a href="#">
+							    <a href="#" id="profile">
 							      <img class="media-object"src="${pageContext.request.contextPath}/resources/upload/user/img/yuth2.png" >
 							    </a>
 							  </div>
@@ -91,7 +99,7 @@
  								Everything is in your hand with your clearly planning.</h4>
 							  </div>
 							   <div class="media-right">
-							    <a href="#">
+							    <a href="#" id="profile">
 							      <img class="media-object"src="${pageContext.request.contextPath}/resources/upload/user/img/bona2.png" >
 							    </a>
 							  </div>
@@ -101,6 +109,7 @@
 					  
 					</div>
 					</div>
+			</div>
 		
 		
 		
