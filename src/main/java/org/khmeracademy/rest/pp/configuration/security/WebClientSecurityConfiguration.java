@@ -31,8 +31,8 @@ public class WebClientSecurityConfiguration extends WebSecurityConfigurerAdapter
 			.withUser("editor").password("editor").roles("EDITOR");*/
 		
 		//TODO: Using UserDetailsService
-		auth.userDetailsService(userDetailsService)
-			.passwordEncoder(new BCryptPasswordEncoder());
+		auth.userDetailsService(userDetailsService);
+			/*.passwordEncoder(new BCryptPasswordEncoder());*/
 	}
 	
 	@Override
@@ -55,19 +55,17 @@ public class WebClientSecurityConfiguration extends WebSecurityConfigurerAdapter
 			.permitAll();
 	}
 	
-	public static void main(String args[]){
+	/*public static void main(String args[]){
 		String password = "123456";
 		String encodedPassword = new BCryptPasswordEncoder().encode(password);
 		System.out.println("ENCODED PASSWORD==> "+  encodedPassword);
 		
 		
-//		
-//		if(new BCryptPasswordEncoder().matches("123", "$2a$10$tjHxrmNY0zML2dvvoO3eMeJOwnVZPoCV9/ah41g0IskW0mQXGXZAK")){
-//			System.out.println("SUCCESS");
-//		}else{
-//			System.out.println("FAILURE");
-//		}
-		
-		
-	}
+		if(new BCryptPasswordEncoder().matches("123", "$2a$10$tjHxrmNY0zML2dvvoO3eMeJOwnVZPoCV9/ah41g0IskW0mQXGXZAK")){
+			System.out.println("SUCCESS");
+		}else{
+			System.out.println("FAILURE");
+		}
+			
+	}*/
 }
