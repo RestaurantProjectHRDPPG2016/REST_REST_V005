@@ -13,9 +13,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-    <sec:authorize access="isAuthenticated()">
+   <%--  <sec:authorize access="isAuthenticated()">
     		<li><a href="/user/${principal.userid}"><sec:authentication property="principal.username"/></a></li>
-	</sec:authorize>
+	</sec:authorize> --%>
         <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> ទំព័រដើម</a></li>
         <li><a href="/about"><span class=" glyphicon glyphicon-user"></span> អំពីយើង</a></li>
         <li><a href="/contact_owner"><span class=" glyphicon glyphicon-earphone"></span> ទំនាក់ទំនង</a></li>

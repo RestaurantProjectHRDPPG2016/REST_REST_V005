@@ -1,9 +1,9 @@
 
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-<script>
+<!-- <script>
 user_id = '<sec:authentication property="principal.userid"/>';
-</script>
+</script> -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
