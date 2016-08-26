@@ -937,6 +937,47 @@ app.controller('MyTypeCtrl', function($scope, $http, $window, $rootScope) {
 
 });
 
+//***************USER ADD To Favorite Ctrl*******
+
+app.controller('addToFavoriteCtrl',function($scope, $http, $window, $rootScope) {
+	$scope.saveAddToFavorite = function() {
+		$http({
+			url : 'http://localhost:8888/addtofavorite',
+			method : 'POST',
+			data : {
+				'm_id' : user_id,
+				'r_id' : $scope.rest_type
+			}
+		}).then(function(response) {
+			$scope.saveAddToFavorite();
+		}, function(response) {
+			alert('failed');
+		});
+	}
+	
+	RESTAURANT.getRestaurantByAddToFavorite = function(id) {
+		$http({
+			url : 'http://localhost:8888/restaurant/user/save' + id,
+			params : $scope.filter,
+			method : 'GET'
+		}).then(function(response) {
+			$scope.addToFavorite = response.data.DATA;
+			RESTAURANT.loadPagination(response.data);
+			if ($scope.addToFavorite.length <= 0) {
+				$("#notfound").show();
+			}
+
+		}, function(response) {
+			console.log(response);
+		});
+	}
+	// TODO: Reload data again
+	$scope.reload = function(filter) {
+		$scope.filter = filter;
+		RESTAURANT.getRestaurantByAddToFavorite(id);
+	};
+	RESTAURANT.getRestaurantByAddToFavorite(id);
+});
 
 //				add and update
 				app.directive('myFilter', [function() {

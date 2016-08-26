@@ -18,8 +18,6 @@
 										style="width: 200px; height: 200px; background: #dddddd;"
 										class="fab" src="http://localhost:8888{{image.url}}" alt="" />
 								</center>
-
-
 							</div>
 							<div class="row">
 								<center>
@@ -57,7 +55,7 @@
 										<a href="/locations/{{r.id}}" id="map">
 											<span class="btn btn-default btn-sm">Visit Map</span>
 										</a> 
-									<span class="btn btn-default btn-sm" ng-click="addtoFaorite()">Add to favorite &nbsp
+									<span class="btn btn-default btn-sm" ng-click="addtoFaorite(r.id)">Add to favorite &nbsp
 										<span class="glyphicon glyphicon-bookmark"></span>
 									</span>
 								</center>

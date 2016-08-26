@@ -244,7 +244,7 @@
 											</div>
 										</div>
 											<div class="form-group">
-											<label for="name" class="cols-sm-2 col-md-2 control-label">Longitude:</label>
+											<label for="name" class="col-sm-2 col-md-2 control-label">Longitude:</label>
 											<div class="cols-sm-10">
 												<div class="input-group col-md-6 col-sm-8">
 													<span class="input-group-addon"><i
@@ -257,53 +257,13 @@
 
 										<div class="form-group">
 										<label for="name" class="cols-sm-2 col-md-2 control-label">Telephone:</label>
-											<input type="button" id="mypho" title="p1"
-												class="btn btn-success" value="+" />
-											<div class="cols-sm-10" id="myphone">
+		
 												<div class="input-group col-md-6 col-sm-8">
-													<span class="input-group-addon"><i
-														class="fa fa-user" aria-hidden="true"></i></span> <input
-														type="number" class="form-control" name="tel" id="tel"
+													<input type="number" class="form-control" name="tel" id="tel"
 														ng-model="tel" placeholder="Enter Telephone" />
 												</div>
-											</div>
 
-											<div class="cols-sm-10 display-none" id="p1">
-												<div class="input-group col-md-5 col-sm-8">
-													<span class="input-group-addon"><i
-														class="fa fa-user" aria-hidden="true"></i></span> <input
-														type="number" class="form-control" name="tel" id="tel"
-														ng-model="tel" placeholder="Enter Telephone 1" />
-												</div>
-											</div>
-
-											<div class="cols-sm-10 display-none" id="p2">
-												<div class="input-group col-md-5 col-sm-8">
-													<span class="input-group-addon"><i
-														class="fa fa-user" aria-hidden="true"></i></span> <input
-														type="number" class="form-control" name="tel" id="tel"
-														ng-model="tel" placeholder="Enter Telephone 2" />
-												</div>
-											</div>
-											
-									    <!--  		<div class="contacts">
-											<div class="col-md-2"> 
-           <label>Contacts:</label>
-             
-                    <div class="form-group multiple-form-group input-group col-md-6 col-md-offset-2">
-                        <div class="input-group-btn input-group-select">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                <span class="concept">Phone</span> </span>
-                            </button>
-                           
-                            <input type="hidden" class="input-group-select-val" name="contacts['type'][]" value="phone">
-                        </div>
-                        <input type="text" name="contacts['value'][]" class="form-control">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-success btn-add">+</button>
-                        </span>
-                    </div> -->
-                </div>			
+               						 </div>			
 
 										<div class="form-group">
 											 <label for="name" class="cols-sm-2 col-md-2 control-label">Images:</label>

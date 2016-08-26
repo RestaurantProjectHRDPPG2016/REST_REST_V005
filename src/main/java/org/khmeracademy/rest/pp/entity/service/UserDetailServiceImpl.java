@@ -29,9 +29,13 @@ public class UserDetailServiceImpl implements UserDetailsService {
 		HttpEntity<String> requestEntity = new HttpEntity<>(headers) ;
 		ResponseEntity<Member> response = restTemplate.exchange(baseUrl + "?email=" + username , HttpMethod.GET, requestEntity, Member.class);
 		System.out.println("ui login=>" + response.getBody());
+		
 		Member member = response.getBody();
+		System.out.println("MEMBER==>" + member);
 		if(member==null)
 			throw new UsernameNotFoundException("==>User not found!!!");
+		
+		System.out.println("MEMBER ID==>" + member.getEmail()+" ID==> "+ member.getUserid());;
 		return member;
 	}
 	

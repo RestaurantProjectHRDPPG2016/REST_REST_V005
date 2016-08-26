@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <nav class="navbar" id="nav" style="background:rgb(85, 174, 221);">
   <div class="container-fluid">
   <div class="container">
@@ -12,7 +13,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="/user/{id}">Hello &nbsp Youra</a></li>
+    <sec:authorize access="isAuthenticated()">
+    		<li><a href="/user/${principal.userid}"><sec:authentication property="principal.username"/></a></li>
+	</sec:authorize>
         <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> ទំព័រដើម</a></li>
         <li><a href="/about"><span class=" glyphicon glyphicon-user"></span> អំពីយើង</a></li>
         <li><a href="/contact_owner"><span class=" glyphicon glyphicon-earphone"></span> ទំនាក់ទំនង</a></li>
